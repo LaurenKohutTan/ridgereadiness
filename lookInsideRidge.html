@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ridge Readiness</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      /* Popup styles */
+      #popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border: 2px solid #444;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        z-index: 1000;
+      }
+      #popup-img {
+        max-width: 400px;
+        max-height: 350px;
+      }
+      .circle-marker {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: rgba(255, 0, 0, 0.5);
+        border-radius: 50%;
+        border: 2px solid red;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        z-index: 500;
+      }
+      #mapcontainer {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menu bar -->
+    <div class="menu-bar">
+      <a href="index.html">
+        <img id="logo" src="ridge.png" alt="Logo" />
+      </a>
+      <ol style="font-family: Courier New;" class="menu">
+        <li><a href="preperation.html">Preparation</a></li>
+        <li><a href="expect.html">What to Expect</a></li>
+        <li><a href="map2.html">Routing Ridge</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="testimonies.html">Advice</a></li>
+        <li><a href="lookInsideRidge.html">A Look Inside Ridge</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+      </ol>
+    </div>
+
+    <br /><br /><br />
+    <h1 style="font-family: Courier New">A Look Inside Ridge!</h1>
+
+    <div id="mapcontainer">
+      <h3>Click on the map below to see pictures of different hallways at Ridge!</h3>
+
+      <!-- Map image -->
+      <img
+        src="ridgemapfinal.jpg"
+        usemap="#image-map"
+        alt="Map"
+        style="max-width: 100%; height: auto;"
+      />
+
+      <!-- Overlay markers -->
+      <div class="circle-marker" style="top: 400px; left: 372px;" data-img="atrium.jpg"></div>
+      <div class="circle-marker" style="top: 480px; left: 310px;" data-img="pacHallway.jpg"></div>
+      <div class="circle-marker" style="top: 580px; left: 637px;" data-img="caf.jpg"></div>
+      <div class="circle-marker" style="top: 610px; left: 490px;" data-img="200.jpg"></div>
+      <div class="circle-marker" style="top: 390px; left: 503px;" data-img="400.jpg"></div>
+      <div class="circle-marker" style="top: 388px; left: 647px;" data-img="600.jpg"></div>
+      <div class="circle-marker" style="top: 529px; left: 550px;" data-img="cafHallway.jpg"></div>
+      <div class="circle-marker" style="top: 530px; left: 830px;" data-img="gyms.jpg"></div>
+      <div class="circle-marker" style="top: 515px; left: 633px;" data-img="healthRoom.jpg"></div>
+      <div class="circle-marker" style="top: 346px; left: 350px;" data-img="lower500.jpg"></div>
+      <div class="circle-marker" style="top: 405px; left: 287px;" data-img="lower700.jpg"></div>
+      <div class="circle-marker" style="top: 593px; left: 524px;" data-img="mainOffice.jpg"></div>
+      <div class="circle-marker" style="top: 593px; left: 328px;" data-img="pacFront.jpg"></div>
+      <div class="circle-marker" style="top: 382px; left: 323px;" data-img="ridgesign.jpg"></div>
+      <div class="circle-marker" style="top: 531px; left: 770px;" data-img="sportsAtrium.jpg"></div>
+
+      <!-- Image map with clickable areas -->
+      <map name="image-map">
+        <area shape="circle" coords="772,460" href="#" data-img="atrium.jpg" />
+        <area shape="circle" coords="696,545" href="#" data-img="pacHallway.jpg" />
+        <area shape="circle" coords="1059,636" href="#" data-img="caf.jpg" />
+        <area shape="circle" coords="925,674" href="#" data-img="200.jpg" />
+        <area shape="circle" coords="788,450" href="#" data-img="400.jpg" />
+        <area shape="circle" coords="1069,468" href="#" data-img="600.jpg" />
+        <area shape="circle" coords="972,609" href="#" data-img="cafHallway.jpg" />
+        <area shape="circle" coords="1217,610" href="#" data-img="gyms.jpg" />
+        <area shape="circle" coords="1055,595" href="#" data-img="healthRoom.jpg" />
+        <area shape="circle" coords="772,426" href="#" data-img="lower500.jpg" />
+        <area shape="circle" coords="709,485" href="#" data-img="lower700.jpg" />
+        <area shape="circle" coords="946,673" href="#" data-img="mainOffice.jpg" />
+        <area shape="circle" coords="750,673" href="#" data-img="pacFront.jpg" />
+        <area shape="circle" coords="745,462" href="#" data-img="ridgesign.jpg" />
+        <area shape="circle" coords="1134,611" href="#" data-img="sportsatrium.jpg" />
+      </map>
+
+      <!-- Popup box -->
+      <div id="popup">
+        <img id="popup-img" src="" alt="Popup Image" />
+        <br />
+        <button onclick="document.getElementById('popup').style.display='none'">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function showPopup(imgSrc) {
+        const popup = document.getElementById('popup');
+        const popupImg = document.getElementById('popup-img');
+        popupImg.src = imgSrc;
+        popup.style.display = 'block';
+      }
+
+      document.querySelectorAll('area').forEach(area => {
+        area.addEventListener('click', function (event) {
+          event.preventDefault();
+          const imgSrc = this.getAttribute('data-img');
+          showPopup(imgSrc);
+        });
+      });
+
+      document.querySelectorAll('.circle-marker').forEach(marker => {
+        marker.addEventListener('click', function () {
+          const imgSrc = this.getAttribute('data-img');
+          showPopup(imgSrc);
+        });
+      });
+    </script>
+  </body>
+</html>

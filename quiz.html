@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ridge Readiness</title>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+      <style>
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+    </style>
+  <body>
+
+   <div class = "menu-bar">
+    <a href="index.html">
+      <img id="logo" src="ridge.png" alt="Logo">
+    </a>
+      <ol style="font-family: Courier New;" class = "menu">
+      <br><br><br>
+      <li><a href="preperation.html">Preparation</a></li>
+      <li><a href="expect.html">What to Expect</a></li>
+      <li><a href="map2.html">Routing Ridge</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="testimonies.html">Advice</a></li>
+      <li><a href="lookInsideRidge.html">A Look Inside Ridge</a></li>
+      <li><a href="aboutUs.html">About Us</a></li>
+      </ol>
+    </div>
+    <br><br><br>
+    <!-- this codes the quiz -->
+  <div class="quiz-container">
+    <h2>Are You Ready for Ridge?</h2>
+    <form id="quizForm">
+    <h4>Quiz Questions</h4>
+      <div class="question" data-question="q1">
+        <p>1. If you need to leave school early where do you go?</p>
+        <label><input type="radio" name="q1" value="Just walk out of school"> Just walk out of school</label>
+        <label><input type="radio" name="q1" value="Call your parents and they will pick you up at the main office"> Call your parents and they will pick you up at the main office</label>
+        <label><input type="radio" name="q1" value="Go to the attendance office and get a slip of paper"> Go to the attendance office and get a slip of paper</label>
+        <label><input type="radio" name="q1" value="Tell your teacher you need to leave, and then walk out of school after signing out"> Tell your teacher you need to leave, and then walk out of school after signing out</label>
+        <div class="feedback-line"></div>
+      </div>
+
+      <div class="question" data-question="q2">
+        <p>2. What do you do if you forget your lanyard?</p>
+        <label><input type="radio" name="q2" value="Borrow your friend's lanyard"> Borrow your friend's lanyard</label>
+        <label><input type="radio" name="q2" value="Go to the attendance office and get a blue lanyard"> Go to the attendance office and get a blue lanyard</label>
+        <label><input type="radio" name="q2" value="Go to the main office and get a white lanyard"> Go to the main office and get a white lanyard</label>
+        <label><input type="radio" name="q2" value="Continue with the school day without the lanyard"> Continue with the school day without the lanyard</label>
+     <div class="feedback-line"></div>
+      </div>
+
+      <div class="question" data-question="q3">
+        <p>3. What do you do if your teacher is absent?</p>
+        <label><input type="radio" name="q3" value="Don't bother going to class because your teacher is never going to show up"> Don't bother going to class because your teacher is never going to show up</label>
+        <label><input type="radio" name="q3" value="Sit in your classroom and wait for the teacher to show up"> Sit in your classroom and wait for the teacher to show up</label>
+        <label><input type="radio" name="q3" value="Check the daily substitute list, and then go to the classroom"> Check the daily substitute list, and then go to the classroom</label>
+        <label><input type="radio" name="q3" value="Check the daily substitute list, and then go to the PAC"> Check the daily substitute list, and then go to the PAC</label>
+        <div class="feedback-line"></div>
+      </div>
+
+      <div class="question" data-question="q4">
+        <p>4. How do I check my grades during the school day?</p>
+        <label><input type="radio" name="q4" value="You can't!"> You can't!</label>
+        <label><input type="radio" name="q4" value="Just go onto genesis and check"> Just go onto genesis and check</label>
+        <label><input type="radio" name="q4" value="Ask your teachers every day what you got on the test/quiz"> Ask your teachers every day what you got on the test/quiz</label>
+        <label><input type="radio" name="q4" value="We get graded in high school?"> We get graded in high school?</label>
+        <div class="feedback-line"></div>
+      </div>
+
+      <div class="question" data-question="q5">
+        <p>5. How do you join a club?</p>
+        <label><input type="radio" name="q5" value="Don't join any clubs"> Don't join any clubs</label>
+        <label><input type="radio" name="q5" value="Show up to a meeting in the beginning of the year"> Show up to a meeting in the beginning of the year</label>
+        <label><input type="radio" name="q5" value="Email the principal asking him what the best club is"> Email the principal asking him what the best club is</label>
+        <label><input type="radio" name="q5" value="There are clubs in high school?"> There are clubs in high school?</label>
+        <div class="feedback-line"></div>
+      </div>
+
+      <div class="question" data-question="q6">
+        <p>6. What do you do over the summer to prepare?</p>
+        <label><input type="radio" name="q6" value="Sleep in every day and waste your time"> Sleep in every day and waste your time</label>
+        <label><input type="radio" name="q6" value="Complete all the summer assignments"> Complete all the summer assignments</label>
+        <label><input type="radio" name="q6" value="Study very hard"> Study very hard</label>
+        <label><input type="radio" name="q6" value="Read a book"> Read a book</label>
+        <div class="feedback-line"></div>
+      </div>
+
+      <div class="question" data-question="q7">
+        <p>7. What to do if you are facing personal or academic issues?</p>
+        <label><input type="radio" name="q7" value="Talk to your counselor or another trusted adult"> Talk to your counselor or another trusted adult</label>
+        <label><input type="radio" name="q7" value="Talk to an adult"> Talk to an adult</label>
+        <label><input type="radio" name="q7" value="Do nothing and continue enduring the problems"> Do nothing and continue enduring the problems</label>
+        <label><input type="radio" name="q7" value="Skip school"> Skip school</label>
+        <div class="feedback-line"></div>
+      </div>
+
+      <div class="question" data-question="q8">
+        <p>8. How do you join sports?</p>
+        <label><input type="radio" name="q8" value="Fill out all necessary forms available on Genesis and make sure you are cleared."> Fill out all necessary forms available on Genesis and make sure you are cleared.</label>
+        <label><input type="radio" name="q8" value="Just show up to the first practice/tryouts"> Just show up to the first practice/tryouts</label>
+        <label><input type="radio" name="q8" value="Fill out the singular form on the Student Hub"> Fill out the singular form on the Student Hub</label>
+        <label><input type="radio" name="q8" value="Email the coach about joining and go to tryouts"> Email the coach about joining and go to tryouts</label>
+        <div class="feedback-line"></div>
+      </div>
+
+      <div class="question" data-question="q9">
+        <p>9. Where can you eat lunch?</p>
+        <label><input type="radio" name="q9" value="In any random classroom without permission"> In any random classroom without permission</label>
+        <label><input type="radio" name="q9" value="In any of the gyms, cafeteria, atrium, in any of the hallways, and sometimes outside"> In any of the gyms, cafeteria, atrium, in any of the hallways, and sometimes outside</label>
+        <label><input type="radio" name="q9" value="Only outside even during bad weather"> Only outside even during bad weather</label>
+        <label><input type="radio" name="q9" value="Go home and eat"> Go home and eat</label>
+        <div class="feedback-line"></div>
+      </div>
+
+      <div class="question" data-question="q10">
+        <p>10. Where can you study in the morning or during lunch?</p>
+        <label><input type="radio" name="q10" value="You can't"> You can't</label>
+        <label><input type="radio" name="q10" value="Outside"> Outside</label>
+        <label><input type="radio" name="q10" value="In any random classroom without permission"> In any random classroom without permission</label>
+        <label><input type="radio" name="q10" value="In the media center which is in the atrium"> In the media center which is in the atrium</label>
+        <div class="feedback-line"></div>
+      </div>
+
+      <div class="question" data-question="q11">
+        <p>11. What are the school timings?</p>
+        <label><input type="radio" name="q11" value="7:30-3:00"> 7:30-3:00</label>
+        <label><input type="radio" name="q11" value="8:00-2:50"> 8:00-2:50</label>
+        <label><input type="radio" name="q11" value="8:20-2:58"> 8:20-2:58</label>
+        <label><input type="radio" name="q11" value="8:00-2:58"> 8:00-2:58</label>
+        <div class="feedback-line"></div>
+      </div>
+    <!-- makes submit button for quiz -->
+      <button type="submit">Submit</button>
+    </form>
+    <div id="feedback" class="feedback"></div>
+  </div>
+
+  <script src="quiz.js"></script>
+    
+  </body>
+</html>
