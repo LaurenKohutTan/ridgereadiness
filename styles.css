@@ -153,6 +153,13 @@ canvas {
   background-color: #ecf0f1;
   padding: 20px;
   border-radius: 10px;
+  text-align: left;
+}
+
+.question label {
+  padding-left: 3em; /*  Sets the overall indentation of the element */
+  text-indent: -2em; 
+  display: inline-block; 
 }
 
 .question p {
