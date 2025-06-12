@@ -32,20 +32,19 @@ h4 {
     width: 100%;
     background-color: #19471e;
     overflow: hidden;
-    position: fixed; /* Keeps the menu at the top */
-    top: 0; /* Aligns it to the top of the page */
-    width: 100%; /* Ensures the menu spans the entire width */
-    z-index: 1000; /* Keeps it on top of other content */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-.menu {
+.menu-bar > .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center; /* Centers the menu items horizontally */
-    align-items: center; /* Centers the items vertically */
-    height: 15px; /* Sets the height of the menu bar */
 }
 
 .menu li {
@@ -53,34 +52,33 @@ h4 {
     margin-right: 15px;
 }
 
+.menu li:last-child {
+    margin-right: 0;
+}
+
 .menu li a {
-    padding: 14px 20px; /* Adds left and right padding for spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px; /* Ensures consistent height */
+    padding: 0 20px; /* Left and right spacing */
     color: white;
     text-decoration: none;
     font-size: 18px;
     transition: background-color 0.3s;
 }
-/* adds hover effect when hovering over the menu options */
+
 .menu li a:hover {
     background-color: #718571;
 }
 
-.menu-bar > .menu {
-  display: flex;
-  justify-content: center; /* Center the items horizontally */
-  width: 100%; /* Make sure it takes up the full width */
-  flex-grow: 1;
+/* Example for any additional elements */
+#rhs {
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
 }
 
-.menu li:last-child {
-  margin-right: 0; /* Removes the margin from the last item */
-}
-#rhs{
-  width: 300px;
-  height: 300px;
-  border-radius: 20%;
-}
-/* adjusts the size, color, and look of the containers */
 #container {
     width: 900px;
     height: 540px;
